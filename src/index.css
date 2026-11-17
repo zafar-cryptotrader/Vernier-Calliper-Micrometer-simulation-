@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overscroll-behavior: none;
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.pb-safe {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+.pt-safe {
+  padding-top: max(0px, env(safe-area-inset-top));
+}
+
+/* Subtle precision studio dot matrix background */
+.studio-grid {
+  background-color: #f4f6f9;
+  background-image: radial-gradient(#cfd6e0 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .studio-grid {
+  background-color: #0b0e14;
+  background-image: radial-gradient(#1e2633 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Tactile knurled grip pattern for fine-tune thumbwheel */
+.knurled-strip {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(17, 22, 29, 0.1) 0px,
+    rgba(17, 22, 29, 0.1) 1px,
+    transparent 1px,
+    transparent 6px
+  );
+}
+
+.dark .knurled-strip {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.14) 0px,
+    rgba(255, 255, 255, 0.14) 1px,
+    transparent 1px,
+    transparent 6px
+  );
+}
+
+

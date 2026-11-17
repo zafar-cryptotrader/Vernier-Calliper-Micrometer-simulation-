@@ -1,0 +1,6 @@
+{
+  "name": "Vernier Caliper",
+  "description": "Minimalist precision vernier caliper web app with mobile touch controls, pinch-to-zoom, and interactive scale reading.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
